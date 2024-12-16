@@ -50,7 +50,7 @@ def convert_grayscale_image():
     return send_file(filtered_image_stream, mimetype='image/jpeg')
 
 @app.route('/invert-filter', methods=['POST'])
-def convert__invert_image():
+def convert_invert_image():
     if 'image' not in request.files:
         return {"error": "No image provided"}, 400
 
@@ -59,7 +59,7 @@ def convert__invert_image():
     return send_file(filtered_image_stream, mimetype='image/jpeg')
 
 @app.route('/sepia-filter', methods=['POST'])
-def convert__sepia_image():
+def convert_sepia_image():
     if 'image' not in request.files:
         return {"error": "No image provided"}, 400
 
